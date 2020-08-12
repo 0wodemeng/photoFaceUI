@@ -20,18 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-       //本界面可以随便怎么设计，我这里只做个粗糙版。核心是LFCamera
-
-       self.lfCamera = [[LFCamera alloc] initWithFrame:self.view.bounds];
-[self.lfCamera switchCamera:YES];
-       //拍摄有效区域（可不设置，不设置则不显示遮罩层和边框）
-       self.lfCamera.effectiveRect = CGRectMake(20, 200, self.view.frame.size.width - 40, 280);
-
-       [self.view insertSubview:self.lfCamera atIndex:0];
-
-
-
-
+    //本界面可以随便怎么设计，我这里只做个粗糙版。核心是LFCamera
+    
+    self.lfCamera = [[LFCamera alloc] initWithFrame:self.view.bounds];
+    [self.lfCamera switchCamera:YES];
+    //拍摄有效区域（可不设置，不设置则不显示遮罩层和边框）
+    self.lfCamera.effectiveRect = CGRectMake(20, 200, self.view.frame.size.width - 40, 280);
+    
+    [self.view insertSubview:self.lfCamera atIndex:0];
+    
+    
+    
+    
     UIButton *take=[UIButton buttonWithType:UIButtonTypeSystem];
     [take setTitle:@"picture" forState:UIControlStateNormal];
     [take setBackgroundColor:[UIColor orangeColor]];
@@ -39,33 +39,33 @@
     [take addTarget:self action:@selector(takePhoto:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:take];
     
-//    self.view.backgroundColor = [UIColor orangeColor];
-//
-//        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-//
-//        CGFloat centerX = self.view.center.x;
-//        CGFloat centerY = self.view.center.y;
-//
-//        UIBezierPath *bezierpath = [UIBezierPath bezierPath];
-//        [bezierpath moveToPoint:CGPointMake(centerX + 50, centerY)];
-//        [bezierpath addCurveToPoint:CGPointMake(centerX, centerY - 50) controlPoint1:CGPointMake(centerX + 50, centerY) controlPoint2:CGPointMake(centerX + 50, centerY - 50)];
-//        [bezierpath addCurveToPoint:CGPointMake(centerX - 50, centerY) controlPoint1:CGPointMake(centerX, centerY - 50) controlPoint2:CGPointMake(centerX - 50, centerY - 50)];
-//        [bezierpath addCurveToPoint:CGPointMake(centerX, centerY + 50) controlPoint1:CGPointMake(centerX - 50, centerY) controlPoint2:CGPointMake(centerX - 50, centerY + 50)];
-//        [bezierpath addCurveToPoint:CGPointMake(centerX + 50, centerY - 0.00001) controlPoint1:CGPointMake(centerX, centerY + 50) controlPoint2:CGPointMake(centerX + 50, centerY + 50)];
-//
-//        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 0.00001)];
-//        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY + 100)];
-//        [bezierpath addLineToPoint:CGPointMake(centerX - 100, centerY + 100)];
-//        [bezierpath addLineToPoint:CGPointMake(centerX - 100, centerY - 100)];
-//        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 100)];
-//        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 0.00001)];
-//
-//        bezierpath.lineWidth = 1;
-//        [bezierpath closePath];
-//        shapeLayer.path = bezierpath.CGPath;
-//        shapeLayer.fillColor = [UIColor redColor].CGColor;
-//
-//    [self.view.layer addSublayer:shapeLayer];
+    //    self.view.backgroundColor = [UIColor orangeColor];
+    //
+    //        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    //
+    //        CGFloat centerX = self.view.center.x;
+    //        CGFloat centerY = self.view.center.y;
+    //
+    //        UIBezierPath *bezierpath = [UIBezierPath bezierPath];
+    //        [bezierpath moveToPoint:CGPointMake(centerX + 50, centerY)];
+    //        [bezierpath addCurveToPoint:CGPointMake(centerX, centerY - 50) controlPoint1:CGPointMake(centerX + 50, centerY) controlPoint2:CGPointMake(centerX + 50, centerY - 50)];
+    //        [bezierpath addCurveToPoint:CGPointMake(centerX - 50, centerY) controlPoint1:CGPointMake(centerX, centerY - 50) controlPoint2:CGPointMake(centerX - 50, centerY - 50)];
+    //        [bezierpath addCurveToPoint:CGPointMake(centerX, centerY + 50) controlPoint1:CGPointMake(centerX - 50, centerY) controlPoint2:CGPointMake(centerX - 50, centerY + 50)];
+    //        [bezierpath addCurveToPoint:CGPointMake(centerX + 50, centerY - 0.00001) controlPoint1:CGPointMake(centerX, centerY + 50) controlPoint2:CGPointMake(centerX + 50, centerY + 50)];
+    //
+    //        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 0.00001)];
+    //        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY + 100)];
+    //        [bezierpath addLineToPoint:CGPointMake(centerX - 100, centerY + 100)];
+    //        [bezierpath addLineToPoint:CGPointMake(centerX - 100, centerY - 100)];
+    //        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 100)];
+    //        [bezierpath addLineToPoint:CGPointMake(centerX + 100, centerY - 0.00001)];
+    //
+    //        bezierpath.lineWidth = 1;
+    //        [bezierpath closePath];
+    //        shapeLayer.path = bezierpath.CGPath;
+    //        shapeLayer.fillColor = [UIColor redColor].CGColor;
+    //
+    //    [self.view.layer addSublayer:shapeLayer];
     
 }
 - (void)takePhoto:(id)sender {
