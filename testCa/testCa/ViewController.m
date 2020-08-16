@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //test github
+    
     //本界面可以随便怎么设计，我这里只做个粗糙版。核心是LFCamera
     
     self.lfCamera = [[LFCamera alloc] initWithFrame:self.view.bounds];
